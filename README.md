@@ -1,0 +1,2 @@
+# Servidor_Diretorios
+Servidor de diretórios para descoberta de servidores, onde aplicação RPC cliente-servidor, é baseada num serviço de diretórios, isto é, para que o cliente possa contatar o servidor desejado, ele precisa antes saber o endereço do servidor para destinar a mensagem para o caminho certo, mas para descobrir o endereço do servidor desejado, o cliente antes contacta um servidor/serviço de diretórios que contém uma lista com todos os servidores ativos no momento e esse servidor de diretórios irá retornar o IP e Porta do servidor desejado pelo cliente.
