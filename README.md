@@ -138,23 +138,12 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
 
 ### Tipos de Danos
 
-- Listar todos os tipos de danos humanos
+- Listar os tipos de danos filtrando pela categoria
 
-`GET /danos-tipos/humanos`
+`GET /danos-tipos`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/danos-tipos/humanos
 
-- Listar todos os tipos de danos materiais
-
-`GET /danos-tipos/materiais`
-
-    curl -i -H 'Accept: application/json' http://localhost:9000/danos-tipos/materiais
-
-- Listar todos os tipos de danos ambientais
-
-`GET /danos-tipos/ambientais`
-
-    curl -i -H 'Accept: application/json' http://localhost:9000/danos-tipos/ambientais
 
 ### Ocorrências
 
@@ -202,9 +191,15 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
 
 - Inserir nova ocorrência
 
-`POST /ocorrencias/add`
+`POST /ocorrencias`
 
-	curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/ocorrencias/add
+	curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/ocorrencias
+	
+- Atualizar ocorrência
+
+`PATCH /ocorrencias`
+
+	curl -i -H 'Accept: application/json' -X PATCH -d 'attr=attr' http://localhost:9000/ocorrencias
 	
 - Buscar todos os danos ambientais da ocorrência
 
@@ -217,6 +212,12 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
 `GET /ocorrencias/{idOcorrencia}/danos-materiais`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/{idOcorrencia}/danos-materiais
+	
+- Buscar todos os danos humanos da ocorrência
+
+`GET /ocorrencias/{idOcorrencia}/danos-humanos`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/{idOcorrencia}/danos-humanos
 
 - Gerar documento da ocorrência
 
