@@ -165,7 +165,7 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/{idOcorrencia}
 
-- Inserir nova ocorrencias
+- Inserir nova ocorrência
 
 `POST /ocorrencias/add`
 
