@@ -1,7 +1,8 @@
 # Ledger
-[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)]
 
-[![Spring Boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
+
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)]
 
 O sistema Ledger foi desenvolvido como projeto da disciplina Residência Técnica em Sistemas de Informação promovida pelo Instituto de Informática da Universidade Federal de Goiás.
 O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrências de desastres, facilitando e padronizando o registro dos danos ocorridos e agilizando o preenchimento do FIDE (Formulário de Informações de Desastres).
