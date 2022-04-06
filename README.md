@@ -1,40 +1,174 @@
-# Servidor_Diretorios
-Servidor de diretórios para descoberta de servidores, onde aplicação RPC cliente-servidor, é baseada num serviço de diretórios, isto é, para que o cliente possa contatar o servidor desejado, ele precisa antes saber o endereço do servidor para destinar a mensagem para o caminho certo, mas para descobrir o endereço do servidor desejado, o cliente antes contacta um servidor/serviço de diretórios que contém uma lista com todos os servidores ativos no momento e esse servidor de diretórios irá retornar o IP e Porta do servidor desejado pelo cliente.
+# Ledger
+[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
+
+O sistema Ledger foi desenvolvido como projeto da disciplina Residência Técnica em Sistemas de Informação promovida pelo Instituto de Informática da Universidade Federal de Goiás.
+O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrências de desastres, facilitando e padronizando o registro dos danos ocorridos e agilizando o preenchimento do FIDE (Formulário de Informações de Desastres).
+
+## Autores
+- [Icaro Aguiar Perez](https://www.github.com/icaro1508)
+- [Marcos Vinícius de Souza Oliveira](https://www.github.com/MarcosVSO)
+- [Pedro Henrique Souza Arcanjo](https://www.github.com/pedrohsa1)
+- [Vitor Abreu Bitencurt]()
+
+## Pré-Requisito
+
+* JDK 11.0.13
+* Spring-boot 2.6.4
+* Maven 3.8.1
+
+## Passos para execução do projeto
+
+1. Clone do repositório
+   ```sh
+   git clone https://github.com/MarcosVSO/ledger.git
+   ```
+2. Instalação de dependências
+   ```sh
+   mvn install
+   ```
+2. Executar projeto
+   ```sh
+   mvn spring-boot:run
+   ```
+
+## Endpoints
+
+### Áreas Afetada
+
+Listar todas as áreas afetada
+`GET /areas-afetadas`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/areas-afetadas
+
+### Cobrade
+
+Listar todos os cobrade
+`GET /cobrade`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/cobrade
+
+### Danos
+
+Listar todos os danos ambientais
+`GET /danos/ambientais`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/danos/ambientais
+
+Listar todos os danos materiais
+`GET /danos/materiais`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/danos/materiais
+
+Buscar pelo ID do dano ambiental
+`GET /danos/ambientais/{idDano}`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/danos/ambientais/{idDano}
+
+Buscar pelo ID do dano humano
+`GET /danos/humanos/{idDano}`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/danos/humanos/{idDano}
+
+Buscar pelo ID do dano material
+`GET /danos/materiais/{idDano}`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/danos/materiais/{idDano}
+
+Inserir dano humano
+`POST /danos/humanos/add`
+
+    curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/danos/humanos/add
+
+Inserir dano material
+`POST /danos/materiais/add`
+
+    curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/danos/materiais/add
+
+Inserir dano Inserir dano ambiental
+`POST /danos/ambientais/add`
+
+    curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/danos/ambientais/add
 
 
-## Requisitos
-[python 3.8.5](https://www.python.org/downloads/release/python-385/)
+### Tipos de Danos
 
-## Como rodar
-1) Instale o pip3 e o virtualenv do python 3
-```shell
-sudo apt update
-sudo apt install python3-pip python3-virtualenv -y
-```
+Listar todos os tipos de danos humanos
+`GET /danos-tipos/humanos`
 
-2) Clone o projeto
-```shell
-git clone https://mrleduardo@bitbucket.org/mrleduardo/new-p2-2021.git
-```
+    curl -i -H 'Accept: application/json' http://localhost:9000/danos-tipos/humanos
 
-3) Instale o virtualenv no diretorio do projeto e o inicie
-```shell
-cd new-p2-2021.git
-virtualenv .venv
-source ./.venv/bin/activate
-```
+Listar todos os tipos de danos materiais
+`GET /danos-tipos/materiais`
 
-4) Instale as dependencias do projeto
-```shell
-pip install -r requeriments.txt
-```
+    curl -i -H 'Accept: application/json' http://localhost:9000/danos-tipos/materiais
 
-### Edite o `constRPYC.py` para apontar para o servidor de  dirertórios
+Listar todos os tipos de danos ambientais
+`GET /danos-tipos/ambientais`
 
-5)   Inicie o servidor com
-```shell
-cd app
-python serverDirectory.py
-```
+    curl -i -H 'Accept: application/json' http://localhost:9000/danos-tipos/ambientais
 
-Lembre-se que para cada instancia da AWS todos os passos são necessários. Caso já tenha instalado e desconectou da maquina sem querer, basta executar o virtualenv com o comando `source ./.venv/bin/activate` na pasta do projeto e seguir o passo 5 novamente.
+### Tipos de Danos
+
+Listar todas as ocorrências
+`GET /ocorrencias`
+
+   curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias
+
+Lista paginada de ocorrências filtrando pelo Cobrade e Status
+`GET /ocorrencias/list`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/list
+
+Buscar pelo cobrade
+`GET /ocorrencias/cobrade/{cobrade}`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/cobrade/{cobrade}
+
+Buscar pela UF
+`GET /ocorrencias/uf/{uf}`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/uf/{uf}
+
+Buscar pelo municipio 
+`GET /ocorrencias/municipio/{municipio}`
+
+	curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/municipio/{municipio}
+	
+Gerar FIDE da ocorrência
+`GET /ocorrencias/gerar-fide/{idOcorrencia}`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/gerar-fide/{idOcorrencia}
+
+Buscar pelo ID da ocorrência
+`GET /ocorrencias/{idOcorrencia}`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/{idOcorrencia}
+
+Inserir nova ocorrencias
+`POST /ocorrencias/add`
+
+	curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/ocorrencias/add
+	
+Buscar todos os danos ambientais da ocorrência
+`GET /ocorrencias/{idOcorrencia}/danos-ambientais`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/{idOcorrencia}/danos-ambientais
+
+Buscar todos os danos materiais da ocorrência
+`GET /ocorrencias/{idOcorrencia}/danos-materiais`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/{idOcorrencia}/danos-materiais
+
+Gerar documento da Ocorrências
+`GET /ocorrencias/gerar-documento/{idOcorrencia}`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/gerar-documento/{idOcorrencia}
+
+### Telefone
+
+Listar todos os telefones
+`GET /telefones`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/telefones
