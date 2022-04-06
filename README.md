@@ -23,7 +23,7 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
    ```sh
    git clone https://github.com/MarcosVSO/ledger.git
    ```
-2. Instalar dependências
+2. Instalação de dependências
    ```sh
    mvn install
    ```
