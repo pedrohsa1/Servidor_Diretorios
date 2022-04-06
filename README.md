@@ -129,7 +129,7 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias
 
-- Lista paginada de ocorrências filtrando pelo Cobrade e Status
+- Lista paginada de ocorrências filtrando pelo cobrade e status
 
 `GET /ocorrencias/list`
 
@@ -183,7 +183,7 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/{idOcorrencia}/danos-materiais
 
-- Gerar documento da Ocorrências
+- Gerar documento da ocorrências
 
 `GET /ocorrencias/gerar-documento/{idOcorrencia}`
 
