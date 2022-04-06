@@ -49,6 +49,18 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
 `GET /cobrade`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/cobrade
+    
+- Buscar pelo ID do cobrade
+
+`GET /cobrade/{id}`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/cobrade/{id}
+    
+- Buscar pelo código do cobrade
+
+`GET /cobrade/{codigoCobrade}`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/cobrade/{codigoCobrade}
 
 ### Danos
 
@@ -57,6 +69,12 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
 `GET /danos/ambientais`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/danos/ambientais
+
+- Listar todos os danos humanos
+
+`GET /danos/humanos`
+
+    curl -i -H 'Accept: application/json' http://localhost:9000/danos/humanos
 
 - Listar todos os danos materiais
 
@@ -84,22 +102,39 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
 
 - Inserir dano humano
 
-`POST /danos/humanos/add`
+`POST /danos/humanos`
 
-    curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/danos/humanos/add
+    curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/danos/humanos
 
 - Inserir dano material
 
-`POST /danos/materiais/add`
+`POST /danos/materiais`
 
-    curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/danos/materiais/add
+    curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/danos/materiais
 
 - Inserir dano ambiental
 
-`POST /danos/ambientais/add`
+`POST /danos/ambientais`
 
-    curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/danos/ambientais/add
+    curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/danos/ambientais
 
+- Excluir dano humano
+
+`DELETE /danos/humanos/{idDano}`
+
+    curl -i -H 'Accept: application/json' --X DELETE http://localhost:9000/danos/humanos/{idDano}
+    
+- Excluir dano material
+
+`DELETE /danos/materiais/{idDano}`
+
+    curl -i -H 'Accept: application/json' --X DELETE http://localhost:9000/danos/materiais/{idDano}
+
+- Excluir dano ambiental
+
+`DELETE /danos/ambientais/{idDano}`
+
+    curl -i -H 'Accept: application/json' --X DELETE http://localhost:9000/danos/ambientais/{idDano}
 
 ### Tipos de Danos
 
