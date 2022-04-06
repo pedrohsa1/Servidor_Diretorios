@@ -94,7 +94,7 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
 
     curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/danos/materiais/add
 
-- Inserir dano Inserir dano ambiental
+- Inserir dano ambiental
 
 `POST /danos/ambientais/add`
 
