@@ -183,7 +183,7 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/{idOcorrencia}/danos-materiais
 
-- Gerar documento da ocorrências
+- Gerar documento da ocorrência
 
 `GET /ocorrencias/gerar-documento/{idOcorrencia}`
 
