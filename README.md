@@ -36,7 +36,7 @@ O sistema foi construindo para auxiliar a Defesa Civil no registro de ocorrênci
 
 ### Áreas Afetada
 
-Listar todas as áreas afetada
+- Listar todas as áreas afetada
 
 `GET /areas-afetadas`
 
@@ -44,7 +44,7 @@ Listar todas as áreas afetada
 
 ### Cobrade
 
-Listar todos os cobrade
+- Listar todos os cobrade
 
 `GET /cobrade`
 
@@ -52,49 +52,49 @@ Listar todos os cobrade
 
 ### Danos
 
-Listar todos os danos ambientais
+- Listar todos os danos ambientais
 
 `GET /danos/ambientais`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/danos/ambientais
 
-Listar todos os danos materiais
+- Listar todos os danos materiais
 
 `GET /danos/materiais`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/danos/materiais
 
-Buscar pelo ID do dano ambiental
+- Buscar pelo ID do dano ambiental
 
 `GET /danos/ambientais/{idDano}`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/danos/ambientais/{idDano}
 
-Buscar pelo ID do dano humano
+- Buscar pelo ID do dano humano
 
 `GET /danos/humanos/{idDano}`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/danos/humanos/{idDano}
 
-Buscar pelo ID do dano material
+- Buscar pelo ID do dano material
 
 `GET /danos/materiais/{idDano}`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/danos/materiais/{idDano}
 
-Inserir dano humano
+- Inserir dano humano
 
 `POST /danos/humanos/add`
 
     curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/danos/humanos/add
 
-Inserir dano material
+- Inserir dano material
 
 `POST /danos/materiais/add`
 
     curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/danos/materiais/add
 
-Inserir dano Inserir dano ambiental
+- Inserir dano Inserir dano ambiental
 
 `POST /danos/ambientais/add`
 
@@ -103,19 +103,19 @@ Inserir dano Inserir dano ambiental
 
 ### Tipos de Danos
 
-Listar todos os tipos de danos humanos
+- Listar todos os tipos de danos humanos
 
 `GET /danos-tipos/humanos`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/danos-tipos/humanos
 
-Listar todos os tipos de danos materiais
+- Listar todos os tipos de danos materiais
 
 `GET /danos-tipos/materiais`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/danos-tipos/materiais
 
-Listar todos os tipos de danos ambientais
+- Listar todos os tipos de danos ambientais
 
 `GET /danos-tipos/ambientais`
 
@@ -123,67 +123,67 @@ Listar todos os tipos de danos ambientais
 
 ### Ocorrências
 
-Listar todas as ocorrências
+- Listar todas as ocorrências
 
 `GET /ocorrencias`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias
 
-Lista paginada de ocorrências filtrando pelo Cobrade e Status
+- Lista paginada de ocorrências filtrando pelo Cobrade e Status
 
 `GET /ocorrencias/list`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/list
 
-Buscar pelo cobrade
+- Buscar pelo cobrade
 
 `GET /ocorrencias/cobrade/{cobrade}`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/cobrade/{cobrade}
 
-Buscar pela UF
+- Buscar pela UF
 
 `GET /ocorrencias/uf/{uf}`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/uf/{uf}
 
-Buscar pelo municipio
+- Buscar pelo municipio
 
 `GET /ocorrencias/municipio/{municipio}`
 
 	curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/municipio/{municipio}
 	
-Gerar FIDE da ocorrência
+- Gerar FIDE da ocorrência
 
 `GET /ocorrencias/gerar-fide/{idOcorrencia}`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/gerar-fide/{idOcorrencia}
 
-Buscar pelo ID da ocorrência
+- Buscar pelo ID da ocorrência
 
 `GET /ocorrencias/{idOcorrencia}`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/{idOcorrencia}
 
-Inserir nova ocorrencias
+- Inserir nova ocorrencias
 
 `POST /ocorrencias/add`
 
 	curl -i -H 'Accept: application/json' -X POST -d 'attr=attr' http://localhost:9000/ocorrencias/add
 	
-Buscar todos os danos ambientais da ocorrência
+- Buscar todos os danos ambientais da ocorrência
 
 `GET /ocorrencias/{idOcorrencia}/danos-ambientais`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/{idOcorrencia}/danos-ambientais
 
-Buscar todos os danos materiais da ocorrência
+- Buscar todos os danos materiais da ocorrência
 
 `GET /ocorrencias/{idOcorrencia}/danos-materiais`
 
     curl -i -H 'Accept: application/json' http://localhost:9000/ocorrencias/{idOcorrencia}/danos-materiais
 
-Gerar documento da Ocorrências
+- Gerar documento da Ocorrências
 
 `GET /ocorrencias/gerar-documento/{idOcorrencia}`
 
@@ -191,7 +191,7 @@ Gerar documento da Ocorrências
 
 ### Telefone
 
-Listar todos os telefones
+- Listar todos os telefones
 
 `GET /telefones`
 
